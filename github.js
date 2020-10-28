@@ -11,12 +11,12 @@ fetch('https://api.github.com/users/romebell')
         username: githubData.login,
         name: githubData.name
     }
-    // console.log(romeObj);
+    console.log(romeObj);
     
-    const newElement = document.createElement('p');
-    newElement.textContent = romeObj.name;
+    // const newElement = document.createElement('p');
+    // newElement.textContent = romeObj.name;
     // append newElement to container
-    container.appendChild(newElement);
+    // container.appendChild(newElement);
 
 })
 .catch(error => {
