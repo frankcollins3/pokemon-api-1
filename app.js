@@ -53,11 +53,11 @@ function makePokemonCard(pokemon) {
 
     const move = document.createElement('p');
     move.classList.add('card-text');
-    move.textContent = pokemon.move;
+    move.textContent = `Move: ${pokemon.move}`;
 
     const ability = document.createElement('p');
     ability.classList.add('card-text');
-    ability.textContent = pokemon.ability;
+    ability.textContent = `Ability: ${pokemon.ability}`;
             // Create a tag, add 2 class, add href, add text
     const purchaseLink = document.createElement('a');
     purchaseLink.classList.add('btn', 'btn-primary');
