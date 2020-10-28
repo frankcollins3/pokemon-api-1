@@ -1,7 +1,8 @@
-const container = document.querySelector('.container');
 
+// console.log('1');
 fetch('https://api.github.com/users/romebell')
 .then(response => {
+    // console.log('2');
     return response.json();
 })
 .then(githubData => {
@@ -10,7 +11,7 @@ fetch('https://api.github.com/users/romebell')
         username: githubData.login,
         name: githubData.name
     }
-    console.log(romeObj);
+    // console.log(romeObj);
     
     const newElement = document.createElement('p');
     newElement.textContent = romeObj.name;
@@ -21,3 +22,4 @@ fetch('https://api.github.com/users/romebell')
 .catch(error => {
     console.log(error);
 });
+// console.log('3');
