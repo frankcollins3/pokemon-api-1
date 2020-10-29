@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-fetch('https://pokeapi.co/api/v2/pokemon/mewtwo')
+fetch('https://pokeapi.co/api/v2/pokemon/slowpoke')
 .then(response => {
     if (response.ok) {
         return response.json();
@@ -14,7 +14,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/mewtwo')
         name: pokemon.name,
         move: pokemon.moves[5].move.name,
         image: pokemon.sprites.other['official-artwork']['front_default'],
-        purchaseLink: 'https://www.ebay.com/i/333115686977?chn=ps'
+        purchaseLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhzbmZxiGDyLtIpQlOV0Bewmi4DpbUnu20cqQi8xabZN3dOTTAwwmT2kyusJhC2-kWwo15fDelYw&usqp=CAc'
     }
 
     const mewTwoCard = makePokemonCard(mewTwo);
@@ -75,12 +75,3 @@ function makePokemonCard(pokemon) {
     
     return card;
 }
-
-{/* <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> */}
